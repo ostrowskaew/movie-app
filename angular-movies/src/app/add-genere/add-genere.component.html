@@ -1,0 +1,43 @@
+<app-manager></app-manager>
+
+<h2>Add new genere: </h2>
+<div>
+    <label>Id:
+    <input #genereId />
+    <br>
+    </label>
+  <label>Name:
+    <input #genereName />
+    <br>
+  </label>
+  <button (click)="addGenere(genereId.value, genereName.value);refreshPage()">
+    add
+  </button>
+</div>
+
+<h2>Add new genere to movie: </h2>
+<div>
+    
+  <label>Movie:
+   <select id="mov" name="mov" [(ngModel)]="movie"
+    class="form-control" >
+        <option *ngFor="let mov of movies" 
+        [value] = "mov.id">
+        {{mov.name}}
+        </option>
+    </select>
+  </label>
+  <label>Genere:
+    <select id="gen" name="gen" [(ngModel)]="genere"
+    class="form-control" >
+        <option *ngFor="let gen of generes" 
+        [value] = "gen.id">
+        {{gen.name}}
+        </option>
+    </select>
+    </label>
+  <button (click)="addGenereMovie();refreshPage();">
+    add
+  </button>
+</div>
+

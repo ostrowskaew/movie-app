@@ -1,0 +1,12 @@
+<div *ngIf="person">
+    <h2>{{person.name}} {{person.surname}}'s films </h2>
+    <div class="grid grid-pad">
+     <a *ngFor="let movie of person.movies"
+     routerLink="/detail/{{movie.id}}">
+     <div class="gallery">
+     <img src="{{movie.imageURL}}" alt="{{movie.name}}">
+     <div class="desc">{{movie.name}}</div>
+    </div>
+    </a>
+</div>
+

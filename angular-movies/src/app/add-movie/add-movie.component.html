@@ -1,0 +1,64 @@
+<app-manager></app-manager>
+
+<h2>Add new movie: </h2>
+<div>
+    <label>Id:
+    <input #movieId />
+    <br>
+    </label>
+  <label>Title:
+    <input #movieName />
+    <br>
+  </label>
+  <label>Duration:
+    <input #movieDuration />
+    <br>
+  </label>
+  <label>Year:
+    <input #moviePremiere />
+    <br>
+  </label>
+  <label>Country:
+    <input #movieCountry />
+    <br>
+  </label>
+  <label>Description:
+    <input #movieDescription />
+    <br>
+  </label>
+  <label>Image Url:
+    <input #movieURL />
+    <br>
+  </label>
+  <label>Director:
+  </label>
+  <select id="movieDirector" name="movieDirector" [(ngModel)]="movDir"
+    class="form-control" >
+        <option *ngFor="let per of persons" 
+        [value] = "per.id">
+        {{per.name}} {{per.surname}}
+        </option>
+    </select>
+
+     <button (click)="addMovie(movieId.value, movieName.value, moviePremiere.value, movieDuration.value, 
+      movieCountry.value,  movieDescription.value, movieURL.value);refreshPage();">
+    add
+  </button>
+    
+</div>
+
+<h2>Delete movie: </h2>
+<div>
+    <label>Movie:
+     <select id="movDel" name="movDel" [(ngModel)]="movieDel"
+    class="form-control" >
+        <option *ngFor="let mov of movies" 
+        [value] = "mov.id">
+        {{mov.name}}
+        </option>
+    </select>
+    </label>
+     <button (click)="deleteMovie();refreshPage();">
+    delete
+  </button>
+</div>

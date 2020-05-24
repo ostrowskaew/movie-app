@@ -1,0 +1,69 @@
+/* HeroesComponent's private CSS styles */
+
+
+.generes {
+
+  list-style-type: none;
+  padding: 0;
+  width: 20em;
+  float: right;
+}
+.generes li {
+  position: relative;
+  cursor: pointer;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.generes li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.generes a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  width: 250px;
+}
+
+.genere a:hover {
+  color: #607D8B;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.delete {
+  position: relative;
+  left: 194px;
+  top: -32px;
+  background-color: gray !important;
+  color: white;
+}
+
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.delete {
+  position: relative;
+  background-color: gray !important;
+  color: white;
+}

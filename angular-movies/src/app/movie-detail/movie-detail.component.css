@@ -1,0 +1,25 @@
+
+
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+}
+
+.lab {
+   color: #111; 
+   font-family: 'Open Sans', sans-serif; 
+   font-size: 14px; 
+   line-height: 20px; 
+   margin: 0 0 48px;
+   font-weight: bold;
+}
+
+.text {
+  color: #111; display: block; 
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 16px; 
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,46 @@
+
+<div class="topnav">
+  <a class="active" routerLink="/dashboard/">{{title}}</a>
+  <a class="" routerLink="/manager/">Manage</a>
+
+  <a href="https://www.apple.com/es/tv/">
+         <img alt="AppleTV" src="https://images-na.ssl-images-amazon.com/images/I/513naL3U%2B8L.png"
+         height="30">
+  </a>
+  <a href="https://netflix.com">
+         <img alt="netflix" src="https://newsweekespanol.com/wp-content/uploads/2018/01/Netflix-Logo-png.jpg"
+         height="30">
+  </a>
+ <a href="https://hbo.com">
+         <img alt="hbo" src="https://www.paredro.com/wp-content/uploads/2019/05/%E2%96%B7-%C2%BFSabes-que%CC%81-significa-HBO-Su-primer-logo-lo-deci%CC%81a.jpg"
+         height="30">
+  </a>
+  <div class="search-container">
+     <app-movie-search></app-movie-search> 
+  </div>
+</div>
+
+<div class="row">
+  <div class="column left" style="background-color:white;">
+    <app-movies></app-movies>
+  </div>
+
+  <div class="column middle" style="background-color:white;">
+    <div class="content">
+    
+
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="column right" style="background-color:white; ">
+      <app-generes></app-generes>
+      <app-persons></app-persons>
+</div>
+
+  <script>
+function displayDelete() {
+  document.getElementsByClassName("detete button").style.display = "visible";
+}
+
+</script>
+

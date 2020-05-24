@@ -1,0 +1,10 @@
+
+<ul class="generes">
+    <h2> Films by generes </h2>
+    <li *ngFor="let genere of generes" >
+        <a routerLink="/genere-list/{{genere.id}}">
+            {{genere.name}}
+            <button class="delete" title="delete movie" style="visibility: hidden;">x</button>
+        </a>   
+    </li>
+</ul>

@@ -1,0 +1,22 @@
+<div *ngIf="movie">
+    <h2>{{movie.name | uppercase}} </h2>
+    <img src="{{movie.imageURL}}" alt="{{movie.name}}" style="width:80%" />
+     <div><span class="lab">Title: </span>{{movie.name}}</div>
+     <div><span class="lab">Year: </span>{{movie.premiere}}</div>
+     <div><span class="lab">Duration: </span>{{movie.duration}}</div>
+     <div><span class="lab">Country: </span>{{movie.country}}</div>
+     <div><span class="lab">Director: </span>
+                 <a routerLink="/director-list/{{movie.director.id}}">
+                {{toStringPerson(movie.director)}}
+                 </a>
+        </div>
+     <div><span class="lab">Generes: </span>
+             <div *ngFor="let genere of movie.generes">
+                 <a routerLink="/genere-list/{{genere.id}}">
+                  {{genere.name}}
+                </a>
+             </div> 
+     <div><span class="lab">Description: </span>{{movie.description}}</div>
+     
+
+</div>

@@ -1,0 +1,10 @@
+
+<ul class="persons">
+    <h2>Films by directors </h2>
+    <li *ngFor="let person of persons" >
+        <a routerLink="/director-list/{{person.id}}">
+            {{person.name}} {{person.surname}}
+            <button class="delete" title="delete person" style="visibility: hidden;" >x</button>
+        </a>   
+    </li>
+</ul>

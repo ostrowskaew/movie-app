@@ -1,0 +1,9 @@
+<h2>All films </h2>
+<ul class="movies">
+    <li *ngFor="let movie of movies" >
+        <a routerLink="/detail/{{movie.id}}">
+            {{movie.name}}
+      <button class="delete" name="delete" title="delete movie" style="visibility: hidden;">x</button>
+        </a>
+    </li>
+</ul>

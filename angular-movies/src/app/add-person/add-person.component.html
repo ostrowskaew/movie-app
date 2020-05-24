@@ -1,0 +1,34 @@
+<app-manager></app-manager>
+<h2>Add new director: </h2>
+<div>
+    <label>Id:
+    <input #personId />
+    <br>
+    </label>
+  <label>Name:
+    <input #personName />
+    <br>
+  </label>
+  <label>Surname:
+    <input #personSurname />
+  </label>
+  <button (click)="addPerson(personId.value, personName.value, personSurname.value);refreshPage();">
+    add
+  </button>
+</div>
+
+<h2>Delete person: </h2>
+<div>
+    <label>Director:
+    <select id="movieDirector" name="movieDirector" [(ngModel)]="movieDir"
+    class="form-control" >
+        <option *ngFor="let per of persons" 
+        [value] = "per.id">
+        {{per.name}} {{per.surname}}
+        </option>
+    </select>
+    </label>
+     <button (click)="deletePerson();refreshPage();">
+    delete
+  </button>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="genere">
+    <h2> Movies from category {{genere.name}} </h2>
+    <div class="grid grid-pad">
+     <a *ngFor="let movie of genere.movies"
+     routerLink="/detail/{{movie.id}}">
+     <div class="gallery">
+     <img src="{{movie.imageURL}}" alt="{{movie.name}}">
+     <div class="desc">{{movie.name}}</div>
+    </div>
+    </a>
+</div>
